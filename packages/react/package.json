@@ -2,7 +2,9 @@
   "name": "@helios-ui/react",
   "type": "module",
   "version": "1.0.0",
-  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
