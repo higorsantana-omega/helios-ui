@@ -1,0 +1,21 @@
+{
+  "name": "omega-design-system",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "pnpm@8.12.1",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "eslint . --cache",
+    "lint:fix": "pnpm run lint --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.21.1",
+    "eslint": "^9.5.0",
+    "eslint-plugin-format": "^0.1.2",
+    "turbo": "^2.0.5"
+  }
+}
