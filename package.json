@@ -1,5 +1,5 @@
 {
-  "name": "omega-design-system",
+  "name": "helios-ui",
   "type": "module",
   "private": true,
   "workspaces": [
@@ -10,10 +10,14 @@
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
     "lint": "eslint . --cache",
-    "lint:fix": "pnpm run lint --fix"
+    "lint:fix": "pnpm run lint --fix",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build && changeset publish"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.21.1",
+    "@changesets/cli": "^2.27.6",
     "eslint": "^9.5.0",
     "eslint-plugin-format": "^0.1.2",
     "turbo": "^2.0.5"

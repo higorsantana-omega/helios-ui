@@ -1,7 +1,7 @@
 {
-  "name": "@omega-ui/react",
+  "name": "@helios-ui/react",
   "type": "module",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -11,7 +11,7 @@
     "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch"
   },
   "devDependencies": {
-    "@omega-ui/tokens": "*",
+    "@helios-ui/tokens": "*",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
