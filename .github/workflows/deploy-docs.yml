@@ -1,0 +1,40 @@
+name: Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Pnpm install
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8.12.1
+          run_install: false
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build packages
+        run: pnpm build
+
+      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+        with:
+          path: ./packages/docs/storybook-static
+          checkout: false
+          install_command: pnpm --version
+          build_command: pnpm --version

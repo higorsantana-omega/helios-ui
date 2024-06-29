@@ -1,14 +1,11 @@
 {
   "name": "@helios-ui/docs",
-  "version": "0.0.0",
+  "private": true,
   "license": "MIT",
   "main": "index.js",
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build": "storybook build"
   },
   "dependencies": {
     "@helios-ui/react": "workspace:*",
