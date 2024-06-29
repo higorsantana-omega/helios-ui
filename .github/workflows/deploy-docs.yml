@@ -3,7 +3,7 @@ name: Deploy Docs
 on:
   push:
     branches:
-      - 5-cicd
+      - main
 
 permissions:
   contents: read
