@@ -36,7 +36,7 @@
   ],
   "scripts": {
     "build": "tsup",
-    "dev": "tsup -- --watch"
+    "dev": "tsup --watch"
   },
   "devDependencies": {
     "@helios-ui/tokens": "*",
@@ -49,5 +49,9 @@
     "tailwindcss": "^3.4.4",
     "tsup": "^8.1.0",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.4.0"
   }
 }
