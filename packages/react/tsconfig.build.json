@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "jsx": "react-jsx",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "baseUrl": ".",
+    "module": "NodeNext",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "strict": true,
+    "declaration": true,
+    "sourceMap": false,
+    "esModuleInterop": true
+  },
+  "include": ["src"]
+}
