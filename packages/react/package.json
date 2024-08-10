@@ -1,16 +1,39 @@
 {
   "name": "@helios-ui/react",
   "version": "1.0.1",
+  "private": false,
   "publishConfig": {
     "access": "public"
   },
   "license": "MIT",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.mjs",
+      "require": "./dist/src/index.js",
+      "default": "./dist/src/index.mjs"
+    },
+    "./styles.css": "./dist/src/styles/index.css",
+    "./utils": {
+      "types": "./dist/src/utils.d.ts",
+      "import": "./dist/src/utils.mjs",
+      "require": "./dist/src/utils.js",
+      "default": "./dist/src/utils.mjs"
+    },
+    "./tailwind-preset": {
+      "types": "./dist/tailwind.config.d.ts",
+      "import": "./dist/tailwind.config.mjs",
+      "require": "./dist/tailwind.config.js",
+      "default": "./dist/tailwind.config.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch"
+    "build": "tsup",
+    "dev": "tsup -- --watch"
   },
   "devDependencies": {
     "@helios-ui/tokens": "*",
