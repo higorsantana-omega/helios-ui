@@ -51,6 +51,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@radix-ui/react-tooltip": "^1.1.2",
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.4.0"
   }
