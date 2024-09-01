@@ -1,6 +1,6 @@
 {
   "name": "@helios-ui/react",
-  "version": "1.0.3",
+  "version": "0.0.1",
   "private": false,
   "publishConfig": {
     "access": "public"
@@ -18,6 +18,12 @@
       "default": "./dist/src/index.mjs"
     },
     "./styles.css": "./dist/src/styles/index.css",
+    "./icons": {
+      "types": "./dist/src/icons/index.d.ts",
+      "import": "./dist/src/icons/index.mjs",
+      "require": "./dist/src/icons/index.js",
+      "default": "./dist/src/icons/index.mjs"
+    },
     "./utils": {
       "types": "./dist/src/utils.d.ts",
       "import": "./dist/src/utils.mjs",
@@ -36,7 +42,7 @@
   ],
   "scripts": {
     "build": "tsup",
-    "dev": "tsup -- --watch"
+    "dev": "tsup --watch"
   },
   "devDependencies": {
     "@helios-ui/tokens": "*",
@@ -49,5 +55,15 @@
     "tailwindcss": "^3.4.4",
     "tsup": "^8.1.0",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-checkbox": "^1.1.1",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-select": "^2.1.1",
+    "@radix-ui/react-tooltip": "^1.1.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.4.0"
   }
 }

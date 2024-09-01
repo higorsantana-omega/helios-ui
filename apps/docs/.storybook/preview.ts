@@ -1,5 +1,7 @@
 import type { Preview } from "@storybook/react";
 
+import '@helios-ui/react/styles.css'
+
 const preview: Preview = {
   parameters: {
     controls: {
